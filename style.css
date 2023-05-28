@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300&display=swap');
+
+:root{
+  /* Primary */
+  --Pale-blue : hsl(225, 100%, 94%);
+  --Bright-blue : hsl(245, 75%, 52%);
+
+
+  /* Neutral */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue:  hsl(223, 47%, 23%);
+
+  /* Fonts */
+
+  --ff-main: 'Red Hat Display', sans-serif;
+
+}
+
+/* general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(images/pattern-background-mobile.svg), var(--Pale-blue);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  display: grid;
+  font-family: var(--ff-main);
+  place-content: center;
+}
+
+.card{
+  border-radius: 20px;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 1px 10px 1px var(--Desaturated-blue);
+  max-width: 25rem;
+  margin-top: 10rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  margin-bottom: 10rem;
+}
+
+/* card-header */
+.card-header{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* card-body */
+.card-body{
+  text-align: center;
+}
+
+.card-title{
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--Dark-blue);
+  padding: 20px;
+}
+
+.card-description{
+  color: var(--Desaturated-blue);
+  font-size: 15px;
+  padding: 0 2.1em 1.4em 2.5em;
+  line-height: 1.5;
+}
+
+/* card-plan */
+.card-plan{
+  background: var(--Very-pale-blue);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.5em 1.5em 1.5em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.card-plan-icon{
+  display: flex;
+}
+
+.card-plan-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.2em;
+  text-align: left;
+  gap: 0.5em;
+}
+
+.card-plan-details h2{
+  font-size: 18px;
+  color: var(--Dark-blue);
+  padding: 2px;
+}
+
+.card-plan-details p{
+  font-size: smaller;
+  color: var(--Desaturated-blue);
+
+}
+
+.card-plan-details-change{
+  color: var(--Dark-blue);
+  font-weight: 600;
+  font-size: .8rem;
+}
+
+.card-plan-details-change:hover{
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+/* button */
+.button-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.btn {
+  all: unset;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: .95rem;
+  font-weight: 700;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  padding: 1em;
+}
+
+.btn:focus-visible{
+  outline: 3px dashed var(--Bright-blue);
+}
+
+.proceed-btn{
+  background: var(--Bright-blue);
+  color: white;
+  opacity: 3;
+  transition: all .1.5s ease;
+  box-shadow: 0 5px 10px 10px var(--Pale-blue);
+}
+
+.proceed-btn:hover{
+  opacity: .8;
+}
+
+.cancel-btn{
+  color: var(--Desaturated-blue);
+  font-weight: 700;
+}
+
+.cancel-btn:hover{
+  color: var(--Dark-blue);
+}
+
+@media (min-width: 768px) {
+
+  body{
+    background: url(images/pattern-background-desktop.svg), var(--Pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .card-title{
+    font-size: 1.7rem;
+    padding-top: 2.3rem;
+    padding-bottom: 1rem;
+  }
+
+  .card-description{
+    font-size: 1.05rem;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .card-plan{
+    margin: 0 1.5em 2em 1.5em;
+    padding: 1.3em;
+  }
+
+  .card-plan-details h2{
+    font-size: 1.05rem;
+  }
+
+  .card-plan-details p{
+    font-size: 1.05rem;
+  }
+
+  .card-plan-details-change {
+    font-size: .9rem;
+  }
+
+  .btn{
+    margin: 0.42em;
+    margin-left: 1.6em;
+    margin-right: 1.6em;
+  }
+
+}
+
+
+
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  padding-block: 4rem;
+  background-color: var(--Dark-blue);
+  color: var(--Very-pale-blue);
+}
+.attribution a { color: hsl(228, 45%, 44%); }
